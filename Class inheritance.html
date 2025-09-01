@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Books I have</title>
+    </head>
+    <body>
+        <h2>Books I have</h2>
+        <p id="details"></p>
+        <script>
+            class Book{
+                constructor(genre){
+                    this.bookname=genre;
+                }
+                present(){
+                    return 'I have read and own '+this.bookname;
+                }
+            }
+            class Title extends Book{
+                constructor(genre,tit){
+                    super(genre);
+                    this.title=tit;
+                }
+                show(){
+                    return this.present()+', it is a '+this.title;
+                }
+            }
+            let myBook=new Title ("New Dragon City", "fantasy");
+            document.getElementById("details").innerHTML= myBook.show();
+        </script>
+    </body>
+</html>
