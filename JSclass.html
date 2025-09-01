@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Info about me</title>
+    </head>
+    <body>
+        <h2>Info about me</h2>
+        <p id="info1"></p>
+        <p id="info2"></p>
+        <script>
+            class info{
+                constructor(name,year){
+                    this.name=name;
+                    this.year=year;
+                }
+                age(){
+                    let date=new Date();
+                    return date.getFullYear()- this.year;
+                }
+            }
+                info1= new info("Ayana", 2013);
+                document.getElementById("info1").innerHTML=
+                "My name is: "+info1.name+", I was born in:"+info1.year+", and my age is:"+info1.age();
+
+                info2= new info("Piper",2012);
+                 document.getElementById("info2").innerHTML=
+                "My friend's name is: "+info2.name+", She was born in:"+info2.year+", and her age is:"+info2.age();
+        </script>
+
+    </body>
+</html>
