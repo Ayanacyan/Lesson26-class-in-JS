@@ -1,0 +1,39 @@
+<html>
+    <head>
+     <title>Taylor Swift</title>
+    </head>
+    <body>
+      <h2>My favourite pop artist</h2>
+      <p id="details"></p>
+      <p id="greeting"></p>
+      <script>
+        class Pop{
+            constructor (name){
+              this.popName= name;
+            }
+            static hello(){
+               return "I love her music";
+            }
+            present(){
+                return 'Her name is '+ this.popName;
+            }
+        }
+            class Artist extends Pop {
+              constructor(name,artist){
+                super(name);
+                this.popArtist = artist;
+              }
+              show(){
+                return this.present()+ ', she is a '+
+                this.popArtist;
+              }
+            }
+            let myPop= new Artist("Taylor Swift","Singer or Songwriter" );
+            document.getElementById("details").innerHTML=
+            myPop.show();
+
+            document.getElementById("greeting").innerHTML=
+            Pop.hello();
+      </script>
+    </body>
+</html>
